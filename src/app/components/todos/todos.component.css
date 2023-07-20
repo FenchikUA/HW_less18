@@ -1,0 +1,86 @@
+.done {
+  text-decoration: line-through;
+}
+
+.block-todo {
+  width: 500px;
+  padding: 20px;
+  margin: auto;
+  background: rgba(255, 255, 255, .5);
+  box-shadow: 1px 5px 10px 0px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.add-todo {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.add-todo input {
+  width: 85%;
+  padding: 8px;
+  border: none;
+}
+
+.add-todo button {
+  padding: 0 20px;
+  border: none;
+  background: #6db5f1;
+  color: white;
+  cursor: pointer;
+}
+
+.add-todo button:hover {
+  background: #4d9fe2;
+}
+
+.todo-task {
+  background: rgba(255, 255, 255, .5);
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.todo-task:last-child {
+  margin: 10px 0 0 0;
+}
+
+.todo-title {
+  padding: 10px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.todo-btn {
+  cursor: pointer;
+  background: #f37c7c;
+  width: 30px;
+  height: 30px;
+  border: none;
+  color: aliceblue;
+  transition: 0.5s;
+}
+
+.todo-btn:hover {
+  background: #e66969;
+  transform: scale(1.1);
+}
+
+.todo-btn-date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-date {
+  font-size: 14px;
+}
+
+.no-task {
+  text-align: center;
+}

@@ -1,0 +1,23 @@
+<div class="block-todo">
+  <div class="add-todo">
+    <input type="text" #newTodoText>
+    <button (click)="addTask(newTodoText.value)">Add</button>
+  </div>
+  <div class="block-todo-task">
+    <div *ngIf="todosService.todos.length; else noTodos">
+      <div *ngFor="let todo of todosService.todos; let i = index" class="todo-task">
+        <div [class.done]="todo.completed" class="todo-title">
+          <input type="checkbox" [checked]="todo.completed" (change)="onChange(todo.id)">
+          {{todo.title}}
+        </div>
+        <div class="todo-btn-date">
+          <div class="todo-date"> {{todo.date| date: 'medium'}}</div>
+          <button (click)="removeTask(todo.id)" class="todo-btn">X</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #noTodos>
+    <h2 class="no-task">No Task</h2>
+  </ng-template>
+</div>
