@@ -5,9 +5,10 @@
   </div>
   <div class="block-todo-task">
     <div *ngIf="todosService.todos.length; else noTodos">
-      <div *ngFor="let todo of todosService.todos; let i = index" class="todo-task">
+      <div *ngFor="let todo of todosService.todos; let i = index" class="todo-task" [class.bg-done]="todo.completed">
         <div [class.done]="todo.completed" class="todo-title">
-          <input type="checkbox" [checked]="todo.completed" (change)="onChange(todo.id)">
+          <input type="checkbox" [checked]="todo.completed" (change)="onChange(todo.id)" class="custom-checkbox" id={{todo.id}} name={{todo.id}} value="yes">
+          <label for={{todo.id}}></label>
           {{todo.title}}
         </div>
         <div class="todo-btn-date">
