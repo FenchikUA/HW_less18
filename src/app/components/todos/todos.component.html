@@ -1,7 +1,7 @@
 <div class="block-todo">
   <div class="add-todo">
     <input type="text" #newTodoText>
-    <button (click)="addTask(newTodoText.value)">Add</button>
+    <button (click)="addTask(newTodoText.value); newTodoText.value=''">Add</button>
   </div>
   <div class="block-todo-task">
     <div *ngIf="todosService.todos.length; else noTodos">

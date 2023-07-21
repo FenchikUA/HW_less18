@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TodoService, Todo } from 'src/app/shared/todos.service';
 
 @Component({
@@ -6,15 +6,15 @@ import { TodoService, Todo } from 'src/app/shared/todos.service';
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.css']
 })
-export class TodosComponent implements OnInit{
+export class TodosComponent implements OnInit {
 
-  constructor(public todosService: TodoService) {}
+  constructor(public todosService: TodoService) { }
   ngOnInit(): void {
-    
+
   }
-  onChange(id:number) {
+  onChange(id: number) {
     this.todosService.onToggle(id)
-  } 
+  }
   removeTask(id: number) {
     this.todosService.removeTask(id)
   }
